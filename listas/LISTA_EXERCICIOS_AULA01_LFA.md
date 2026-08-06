@@ -3,9 +3,9 @@
 ## Linguagens Formais e Autômatos
 
 **Tema:** sintaxe, semântica e análise de código  
-**Professor:** __________________________________________  
-**Aluno(a):** ___________________________________________  
-**Turma:** ___________________ **Data:** ____/____/________
+**Professor:** Murillo Edson de Carvalho Souza  
+**Aluno(a):** Paula Ribeiro Moreira de Souza  
+**Turma:** ENGCDM3B **Data:** 06/08/2026
 
 ---
 
@@ -45,25 +45,25 @@ Classifique cada sentença utilizando uma das categorias:
 
 | Item | Sentença | Classificação | Justificativa |
 |---:|---|:---:|---|
-| 1 | “As flores são belas.” |  |  |
-| 2 | “As flores é bela.” |  |  |
-| 3 | “Vou corre hoje no parque.” |  |  |
-| 4 | “Água bebeu José.” |  |  |
-| 5 | “O aluno acabou a prova.” |  |  |
+| 1 | “As flores são belas.” | A | a semântics e a gramática estão de acordo com a língua portuguesa |
+| 2 | “As flores é bela.” | C | a semântica está correta, mas a gramática do verbo "é" não está de acordo com a língua portuguesa |
+| 3 | “Vou corre hoje no parque.” | C | a semântica está correta, mas a gramática do verbo "corre" não está de acordo com a língua portuguesa |
+| 4 | “Água bebeu José.” | B | a semântica está incorreta, dificultando o entendimento e a gramática está de acordo com a língua portuguesa |
+| 5 | “O aluno acabou a prova.” | A | a semântica e a gramática estão de acordo com a língua portuguesa |
 
 ### Questões complementares
 
 1. A sentença do item 4 é impossível em português ou apenas incomum na ordem mais frequente? Explique.
 
    **Resposta:**  
-   ____________________________________________________________________________  
-   ____________________________________________________________________________
+   A sentença não é impossível em português, já que ela está gramaticalmente correta, porém não possui sentido lógico, prejudicando a semântica e tornando-a não adequada ao português usual
 
 2. Reescreva todas as sentenças problemáticas de maneira adequada ao português usual.
 
    **Resposta:**  
-   ____________________________________________________________________________  
-   ____________________________________________________________________________
+   2. As flores são belas
+   3. Vou correr hoje no parque
+   4. José bebeu água
 
 ---
 
@@ -83,11 +83,10 @@ Analise os trechos abaixo. Classifique o problema predominante como:
 45 := a;
 ```
 
-Classificação: ________
+Classificação: M
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+erro na semântica, já que 45 é um valor constante e não pode receber o conteúdo de a
 
 ### Item 2
 
@@ -95,11 +94,10 @@ ____________________________________________________________________________
 então (a < 10) se;
 ```
 
-Classificação: ________
+Classificação: S
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+erro na sintaxe, já que a ordem está invertida
 
 ### Item 3
 
@@ -108,11 +106,10 @@ inteiro soma;
 soma := 4.5;
 ```
 
-Classificação: ________
+Classificação: M
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+a variável soma foi declarada como inteiro, mas recebeu um valor numérico
 
 ### Item 4
 
@@ -122,11 +119,10 @@ media := 10.0;
 
 Considere que `media` não foi declarada anteriormente.
 
-Classificação: ________
+Classificação: M
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+a variável media não foi declarada antes do uso
 
 ### Item 5
 
@@ -135,11 +131,10 @@ real media;
 media := 10.0;
 ```
 
-Classificação: ________
+Classificação: V
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+a variável media foi declarada como real e recebeu o valor 10.0, que também é real. Não há erro sintático nem semântico.
 
 ### Item 6
 
@@ -150,12 +145,10 @@ se a < 10 então
 
 Considere que `a` foi declarada como inteira.
 
-Classificação: ________
+Classificação: V
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
-
+a condição segue a estrutura se condição então comando, e a variável a foi declarada como inteira. A atribuição a := a + 1 também é compatível com o tipo da variável.
 ---
 
 ## Exercício 3 — Ambiguidade e contexto
@@ -168,9 +161,8 @@ Explique a classe gramatical e o significado da palavra destacada em cada frase.
 2. “O **caminho** é longo.”
 
 **Explicação:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+1. é um verbo
+2. é um substantivo
 
 ### Caso B — “colher”
 
@@ -178,9 +170,8 @@ ____________________________________________________________________________
 2. “A **colher** caiu no chão.”
 
 **Explicação:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+1. é um verbo
+2. é um substantivo
 
 ### Caso C — programação
 
@@ -201,18 +192,18 @@ fim
 2. Que informações o compilador precisa consultar para interpretar corretamente esse nome?
 
 **Resposta:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+1. No primeiro trecho, o nome soma representa uma variável do tipo inteiro, que recebe o valor 10.
+
+No segundo trecho, o nome soma representa uma função que recebe dois números inteiros e retorna a adição entre eles.
+
+2. O compilador precisa consultar as declarações, os tipos dos elementos e o escopo em que o nome está sendo utilizado. Assim, ele consegue identificar se soma representa uma variável ou uma função em cada contexto.
 
 ### Debate
 
 Por que um compilador precisa considerar declarações, tipos e escopos para decidir se um código está correto?
 
 **Anotações:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+Porque essas informações determinam como cada elemento deve ser interpretado. As declarações indicam quais variáveis e funções existem, os tipos mostram quais valores e operações são permitidos, e os escopos definem em quais partes do programa cada nome pode ser utilizado.
 
 ---
 
@@ -234,30 +225,27 @@ Responda:
 1. O trecho está sintaticamente correto? Justifique.
 
    **Resposta:**  
-   __________________________________________________________________________  
-   __________________________________________________________________________
+   Sim. O trecho está sintaticamente correto porque as declarações e a atribuição seguem a estrutura definida pela pseudolinguagem.
 
 2. Há incompatibilidade de tipos ou uso de variável não declarada no trecho apresentado?
 
    **Resposta:**  
-   __________________________________________________________________________  
-   __________________________________________________________________________
+   Não. As variáveis salario e novoSalario foram declaradas como reais, e a operação de multiplicação também produz um valor real.
 
 3. O programa realiza o objetivo proposto? Justifique.
 
    **Resposta:**  
-   __________________________________________________________________________  
-   __________________________________________________________________________
+   Não. O objetivo era conceder um aumento de 10%, mas o código multiplica o salário por 11. Isso faz o resultado ser onze vezes o salário original, em vez de representar um aumento de apenas 10%.
 
 4. Classifique o problema como erro sintático, erro semântico estático ou erro lógico.
 
    **Resposta:**  
-   __________________________________________________________________________
+   O problema é um erro lógico, pois o código é aceito pelo compilador e executado, mas produz um resultado diferente do objetivo proposto.
 
 5. Corrija a linha responsável pelo problema.
 
 ```text
-
+novoSalario := salario * 1.1;
 
 ```
 
@@ -273,25 +261,25 @@ Organize as etapas abaixo na ordem didática mais comum de um compilador:
 
 ### Parte A — Lista numerada
 
-1. __________________________________________________________________________
-2. __________________________________________________________________________
-3. __________________________________________________________________________
+1. análise léxica
+2. análise sintática 
+3. análise semântica
 
 ### Parte B — O que cada etapa recebe e produz?
 
 | Etapa | O que analisa? | Exemplo de problema detectado |
 |---|---|---|
-| Análise léxica |  |  |
-| Análise sintática |  |  |
-| Análise semântica |  |  |
+| Análise léxica | Analisa os caracteres do código e os organiza em tokens. | Palavra ou símbolo que não pode ser reconhecido como token válido. |
+| Análise sintática | Analisa a ordem e a estrutura dos tokens conforme a gramática da linguagem. | Comando escrito em ordem incorreta, como então condição se. |
+| Análise semântica | Analisa o significado das estruturas, as declarações e a compatibilidade de tipos. | Utilização de variável não declarada ou atribuição de valor real a uma variável inteira. |
 
 ### Parte C — Fluxograma
 
 Desenhe um fluxo contendo os seguintes elementos:
 
 ```text
-Código-fonte → __________ → tokens → __________ → estrutura sintática
-            → __________ → código validado para as próximas etapas
+Código-fonte → análise léxica → tokens → análise sintática → estrutura sintática
+            → análise semântica → código validado para as próximas etapas
 ```
 
 ### Questão de reflexão
@@ -299,9 +287,7 @@ Código-fonte → __________ → tokens → __________ → estrutura sintática
 Por que a análise semântica normalmente depende dos resultados das análises léxica e sintática?
 
 **Resposta:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+A análise semântica depende das análises léxica e sintática porque, antes de verificar o significado do código, o compilador precisa reconhecer os tokens e organizar esses tokens em uma estrutura válida. Somente depois disso ele consegue verificar declarações, tipos, escopos e compatibilidade entre os elementos.
 
 ---
 
@@ -321,8 +307,8 @@ Para cada exemplo, apresente a classificação e a justificativa.
 
 Complete:
 
-- **Léxico** está relacionado a _______________________________________________.
-- **Sintaxe** está relacionada a ______________________________________________.
-- **Semântica** está relacionada a ____________________________________________.
-- **Erro lógico** ocorre quando _______________________________________________.
+- **Léxico** está relacionado ao reconhecimento dos caracteres, palavras, símbolos e tokens da linguagem.
+- **Sintaxe** está relacionada à ordem e à estrutura dos elementos conforme as regras da linguagem.
+- **Semântica** está relacionada a ao significado das estruturas, às declarações, aos tipos e aos escopos.
+- **Erro lógico** ocorre quando o código é aceito e executado, mas produz um resultado diferente do esperado.
 
