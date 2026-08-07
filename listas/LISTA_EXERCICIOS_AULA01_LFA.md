@@ -96,8 +96,7 @@ então (a < 10) se;
 Classificação: S
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+Pois, a estrutura correta, seria se (a < 10) então. Por isso pode ser reconhecida, mas está errada.
 
 ### Item 3
 
@@ -109,8 +108,7 @@ soma := 4.5;
 Classificação: V
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+Não há erro, pois a variável é declarada e comparada com o valor corretamente.
 
 ### Item 4
 
@@ -123,8 +121,7 @@ Considere que `media` não foi declarada anteriormente.
 Classificação: M
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+A estrutura é reconhecida, mas está incorreta, pois não há declaração da variável media e sendo assim não há declaração do valor 10 pra media, pois ele não foi declarado antes.
 
 ### Item 5
 
@@ -136,8 +133,7 @@ media := 10.0;
 Classificação: V
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+Correto, pois dessa vez a variável media foi declarada corretamente.
 
 ### Item 6
 
@@ -151,8 +147,7 @@ Considere que `a` foi declarada como inteira.
 Classificação: V
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+Correta, pois a variável #a foi declarada corretamente antes de ser comparada com o valor.
 
 ---
 
