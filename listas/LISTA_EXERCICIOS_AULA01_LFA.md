@@ -45,26 +45,23 @@ Classifique cada sentença utilizando uma das categorias:
 
 | Item | Sentença | Classificação | Justificativa |
 |---:|---|:---:|---|
-| 1 | “As flores são belas.” |  |  |
-| 2 | “As flores é bela.” |  |  |
-| 3 | “Vou corre hoje no parque.” |  |  |
-| 4 | “Água bebeu José.” |  |  |
-| 5 | “O aluno acabou a prova.” |  |  |
+| 1 | “As flores são belas.” | A | Estrutura correta e concordância adequada.|
+| 2 | “As flores é bela.” | B | Erro de concordância de número (plural/singular).|
+| 3 | “Vou corre hoje no parque.”| C | Palavra mal flexionada; falta o "r" no infinitivo (correr)|
+| 4 | “Água bebeu José.”| A | Ordem invertida (Objeto-Verbo-Sujeito), mas gramaticalmente aceita.|
+| 5 | “O aluno acabou a prova.” | A | Estrutura padrão (Sujeito-Verbo-Objeto) correta. |
 
 ### Questões complementares
 
 1. A sentença do item 4 é impossível em português ou apenas incomum na ordem mais frequente? Explique.
 
    **Resposta:**  
-   ____________________________________________________________________________  
-   ____________________________________________________________________________
+R = É apenas incomum. A ordem padrão do português é Sujeito-Verbo-Objeto, mas a flexibilidade da língua permite a ordem Objeto-Verbo-Sujeito por estilo ou ênfase.
 
 2. Reescreva todas as sentenças problemáticas de maneira adequada ao português usual.
 
    **Resposta:**  
-   ____________________________________________________________________________  
-   ____________________________________________________________________________
-
+R = Item 2: "As flores são belas." | Item 3: "Vou correr hoje no parque."
 ---
 
 ## Exercício 2 — Sintaxe e semântica na programação
@@ -83,11 +80,10 @@ Analise os trechos abaixo. Classifique o problema predominante como:
 45 := a;
 ```
 
-Classificação: ________
+Classificação: ____S____
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+R = O lado esquerdo de uma atribuição deve ser um identificador (variável), não um valor literal. A ordem estrutural está errada.
 
 ### Item 2
 
@@ -95,11 +91,10 @@ ____________________________________________________________________________
 então (a < 10) se;
 ```
 
-Classificação: ________
+Classificação: ___S_____
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+R = As palavras reservadas estão fora da ordem estabelecida pela gramática (espera-se se condição então comando).
 
 ### Item 3
 
@@ -108,11 +103,10 @@ inteiro soma;
 soma := 4.5;
 ```
 
-Classificação: ________
+Classificação: ____M____
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+R = Incompatibilidade de tipos. Tenta-se atribuir um valor real (4.5) a uma variável declarada como inteira.
 
 ### Item 4
 
@@ -122,11 +116,10 @@ media := 10.0;
 
 Considere que `media` não foi declarada anteriormente.
 
-Classificação: ________
+Classificação: ___M_____
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+R = A variável media foi utilizada na atribuição sem ter sido previamente declarada na memória.
 
 ### Item 5
 
@@ -135,11 +128,10 @@ real media;
 media := 10.0;
 ```
 
-Classificação: ________
+Classificação: ___V_____
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+R = A variável foi declarada corretamente e recebe um valor numérico compatível com seu tipo.
 
 ### Item 6
 
@@ -150,11 +142,10 @@ se a < 10 então
 
 Considere que `a` foi declarada como inteira.
 
-Classificação: ________
+Classificação: ____V____
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+R = A estrutura segue as regras do condicional e a atribuição aritmética usa uma variável previamente declarada e de tipo compatível.
 
 ---
 
@@ -168,9 +159,7 @@ Explique a classe gramatical e o significado da palavra destacada em cada frase.
 2. “O **caminho** é longo.”
 
 **Explicação:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+R = Na frase 1, "caminho" é um verbo (ação de andar). Na frase 2, é um substantivo (lugar por onde se anda, trajeto).
 
 ### Caso B — “colher”
 
@@ -178,9 +167,7 @@ ____________________________________________________________________________
 2. “A **colher** caiu no chão.”
 
 **Explicação:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+R = Na frase 1, "colher" é um verbo (ação de retirar da terra). Na frase 2, é um substantivo (o utensílio de mesa).
 
 ### Caso C — programação
 
@@ -201,18 +188,14 @@ fim
 2. Que informações o compilador precisa consultar para interpretar corretamente esse nome?
 
 **Resposta:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+R = No primeiro trecho, representa uma variável (espaço na memória). No segundo, representa o nome de uma função.
 
 ### Debate
 
 Por que um compilador precisa considerar declarações, tipos e escopos para decidir se um código está correto?
 
 **Anotações:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+R = O compilador consulta a Tabela de Símbolos, verificando escopo e declarações anteriores para saber como tratar o nome.
 
 ---
 
@@ -234,31 +217,27 @@ Responda:
 1. O trecho está sintaticamente correto? Justifique.
 
    **Resposta:**  
-   __________________________________________________________________________  
-   __________________________________________________________________________
-
+R = Sim. O trecho obedece à estrutura gramatical de atribuição da linguagem (identificador :=     expressao).
 2. Há incompatibilidade de tipos ou uso de variável não declarada no trecho apresentado?
 
    **Resposta:**  
-   __________________________________________________________________________  
-   __________________________________________________________________________
+R = Não. Ambas as variáveis são reais e a operação de multiplicação é válida para esse tipo.
 
 3. O programa realiza o objetivo proposto? Justifique.
 
    **Resposta:**  
-   __________________________________________________________________________  
-   __________________________________________________________________________
+  R = Não. Multiplicar por 11 aumenta o valor em 1000%, e não em 10% (que seria 1.1).
 
 4. Classifique o problema como erro sintático, erro semântico estático ou erro lógico.
 
    **Resposta:**  
-   __________________________________________________________________________
+   ___R =_Erro lógico ______________________________________________________________________
 
 5. Corrija a linha responsável pelo problema.
 
 ```text
 
-
+novoSalario := salario * 1.1;
 ```
 
 ---
@@ -273,17 +252,20 @@ Organize as etapas abaixo na ordem didática mais comum de um compilador:
 
 ### Parte A — Lista numerada
 
-1. __________________________________________________________________________
-2. __________________________________________________________________________
-3. __________________________________________________________________________
+1. R = Análise léxica (scanner).
+2. R = Análise sintática (parser).
+3. R = Análise semântica.
 
 ### Parte B — O que cada etapa recebe e produz?
 
 | Etapa | O que analisa? | Exemplo de problema detectado |
 |---|---|---|
-| Análise léxica |  |  |
-| Análise sintática |  |  |
-| Análise semântica |  |  |
+
+| Análise léxica | Agrupamento de caracteres em tokens (palavras) | Identificador com caractere inválido (ex: 2var)|
+
+| Análise sintática | Ordem e estrutura dos tokens (gramática). | Falta de parênteses ou então após um se. |
+
+| Análise semântica | Significado, escopo e tipagem das instruções. | Operação entre variável tipo texto e tipo numérico. |
 
 ### Parte C — Fluxograma
 
@@ -299,9 +281,7 @@ Código-fonte → __________ → tokens → __________ → estrutura sintática
 Por que a análise semântica normalmente depende dos resultados das análises léxica e sintática?
 
 **Resposta:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+R = Porque a semântica avalia o significado de uma frase inteira estruturada. Não é possível checar o significado de algo que sequer forma uma palavra válida (léxica) ou uma frase com sentido gramatical (sintaxe).
 
 ---
 
@@ -315,14 +295,19 @@ Crie três pequenos exemplos:
 
 Para cada exemplo, apresente a classificação e a justificativa.
 
----
+R(1) = Léxico/Escrita: inteiro @num := 5; (Justificativa: O caractere @ geralmente é inválido na formação de identificadores).
+
+R(2) = Sintático: se (x > 5) x := 1; (Justificativa: Falta a palavra reservada então exigida pela gramática da nossa pseudolinguagem).
+
+R(3) = Lógico: area := base + altura; (Justificativa: Sintaxe e tipos válidos, mas a fórmula de área retangular correta exige multiplicação *, não soma +).
 
 ## Síntese
 
 Complete:
 
-- **Léxico** está relacionado a _______________________________________________.
-- **Sintaxe** está relacionada a ______________________________________________.
-- **Semântica** está relacionada a ____________________________________________.
-- **Erro lógico** ocorre quando _______________________________________________.
+- **Léxico** está relacionado a formação de palavras válidas (tokens) a partir de caracteres.
+- **Sintaxe** está relacionada a estrutura, ordem e gramática das instruções.
+- **Semântica** está relacionada a significado, regras de tipo, declaração e escopo.
+- **Erro lógico** ocorre quando o código compila e executa, mas produz um resultado incorreto devido a falha no raciocínio ou no algoritmo.
+
 
