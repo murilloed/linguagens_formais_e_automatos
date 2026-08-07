@@ -200,7 +200,7 @@ fim
 Por que um compilador precisa considerar declarações, tipos e escopos para decidir se um código está correto?
 
 **Anotações:**  
-
+Para assim ter uma regra ou norma para ser seguida, para que assim diga o que está certo ou errado no código, assim como na língua portuguesa.
 
 ---
 
@@ -222,33 +222,31 @@ Responda:
 1. O trecho está sintaticamente correto? Justifique.
 
    **Resposta:**  
-   __________________________________________________________________________  
-   __________________________________________________________________________
+   Sim, pois a estrutura está correta e até por isso foi também compilada.
 
 2. Há incompatibilidade de tipos ou uso de variável não declarada no trecho apresentado?
 
    **Resposta:**  
-   __________________________________________________________________________  
-   __________________________________________________________________________
-
+  Não, pois na lógica de estrutura das variáveis elas estão sendo feitas e declaradas corretamente
+  
 3. O programa realiza o objetivo proposto? Justifique.
 
    **Resposta:**  
-   __________________________________________________________________________  
-   __________________________________________________________________________
+  Não, pois o que é pedido é tanto um aumento de 1,1 no salário, mas no código há uma multiplicação com 11, não 1,1, sendo assim um valor maior que o pedido. 
 
 4. Classifique o problema como erro sintático, erro semântico estático ou erro lógico.
 
    **Resposta:**  
-   __________________________________________________________________________
+   Erro semântico, pois há estrutura reconhecida, mas seus elementos são compatíveis.
 
 5. Corrija a linha responsável pelo problema.
 
 ```text
+real salario;
+real novoSalario;
 
-
+novoSalario := salario * 1.1;
 ```
-
 ---
 
 ## Exercício 5 — Ordem de processamento
@@ -261,25 +259,25 @@ Organize as etapas abaixo na ordem didática mais comum de um compilador:
 
 ### Parte A — Lista numerada
 
-1. __________________________________________________________________________
-2. __________________________________________________________________________
-3. __________________________________________________________________________
+1. Análise Léxica
+2. Análise Sintática
+3. Análise Semântica
 
 ### Parte B — O que cada etapa recebe e produz?
 
 | Etapa | O que analisa? | Exemplo de problema detectado |
 |---|---|---|
-| Análise léxica |  |  |
-| Análise sintática |  |  |
-| Análise semântica |  |  |
+| Análise léxica | Entrada de caractere por caractere e as unidades básicas de significado | Caracteres inválidos e tokens não reconhecidos |
+| Análise sintática | Se a sequência de tokens da análise léxica, está certa  | Erros na estrutura gramatical e operadores em locais inesperados |
+| Análise semântica | O significado e a lógica por trás da estrutura sintática | Variáveis não declaradas e incompatibilidades de tipos (multiplicar um inteiro por string). |
 
 ### Parte C — Fluxograma
 
 Desenhe um fluxo contendo os seguintes elementos:
 
 ```text
-Código-fonte → __________ → tokens → __________ → estrutura sintática
-            → __________ → código validado para as próximas etapas
+Código-fonte → Análise léxica → tokens → Análise Sintática → estrutura sintática
+            → Análise Semântica → código validado para as próximas etapas
 ```
 
 ### Questão de reflexão
@@ -287,9 +285,7 @@ Código-fonte → __________ → tokens → __________ → estrutura sintática
 Por que a análise semântica normalmente depende dos resultados das análises léxica e sintática?
 
 **Resposta:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+Pois ela utiliza árvores sintáticas, geradas pelas análises sintáticas e para verificar as coerência lógica dos programas.
 
 ---
 
@@ -303,14 +299,20 @@ Crie três pequenos exemplos:
 
 Para cada exemplo, apresente a classificação e a justificativa.
 
----
+1) Isso seria um problema de Analise Léxica. EX: String nome = "Maria;
+2) Isso seria um problema de Analise Sintática. EX: int a = 5 + ;
+3) Isso seria um problema de Analise Semântica. EX: 45:= a;
 
 ## Síntese
 
 Complete:
 
-- **Léxico** está relacionado a _______________________________________________.
-- **Sintaxe** está relacionada a ______________________________________________.
-- **Semântica** está relacionada a ____________________________________________.
-- **Erro lógico** ocorre quando _______________________________________________.
+- **Léxico** está relacionado a escrita  e tokens .
+- **Sintaxe** está relacionada a se os tokens ou escritas estão certos.
+- **Semântica** está relacionada a significado e lógica da estrutura sintática.
+- **Erro lógico** ocorre quando é executado com sucesso, mas o resultado não está correto ou é o esperado.
 
+---------------------------------------------
+**Prompt usado**
+
+Pode me dar exemplos de erros de análises léxicas, sintáticas e semânticas.
