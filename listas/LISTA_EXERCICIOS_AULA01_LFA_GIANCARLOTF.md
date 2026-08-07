@@ -5,7 +5,7 @@
 **Tema:** sintaxe, semântica e análise de código  
 **Professor:** Murillo Edson de Carvalho Souza  
 **Aluno(a):** Giancarlo Tabaczenski Fernandes  
-**Turma:** ENGCDM3B **Data:** 06/08/2026
+**Turma:** ENGCDM3B **Data:** 07/08/2026
 
 ---
 
@@ -45,26 +45,26 @@ Classifique cada sentença utilizando uma das categorias:
 
 | Item | Sentença | Classificação | Justificativa |
 |---:|---|:---:|---|
-| 1 | “As flores são belas.” | A |  |
-| 2 | “As flores é bela.” | B |  |
-| 3 | “Vou corre hoje no parque.” | C |  |
-| 4 | “Água bebeu José.” | B |  |
-| 5 | “O aluno acabou a prova.” | A |  |
+| 1 | “As flores são belas.” | A | Construção sintaticamente adequada |
+| 2 | “As flores é bela.” | B | Apresenta um erro de concordância verbal (“é” em vez de “são”) e um erro de concordância nominal (“bela” em vez de “belas”) |
+| 3 | “Vou corre hoje no parque.” | C | Apresenta um problema de flexão (“corre” em vez “correr”) |
+| 4 | “Água bebeu José.” | B | Apresenta construção em ordem não usual, que pode ser interpretado como sintaticamente inválido |
+| 5 | “O aluno acabou a prova.” | A | Construção sintaticamente adequada |
 
 ### Questões complementares
 
 1. A sentença do item 4 é impossível em português ou apenas incomum na ordem mais frequente? Explique.
 
    **Resposta:**  
-   ____________________________________________________________________________  
-   ____________________________________________________________________________
+   A sentença não é impossível em português; porém, é incomum.  
+   Interpretando “Água” como sujeito e “José” como objeto direto, observa-se que a estrutura sintática é válida. O estranhamento decorre da interpretação semântica, pois, no uso comum da língua, oespera-se que “José” seja o agente da ação de beber e que a “Água” seja o objeto.
 
 2. Reescreva todas as sentenças problemáticas de maneira adequada ao português usual.
 
    **Resposta:**  
    “As flores são belas.”  
    “Vou correr hoje no parque.”  
-   “José bebeu Água.”
+   “José bebeu água.”
 
 ---
 
@@ -84,11 +84,10 @@ Analise os trechos abaixo. Classifique o problema predominante como:
 45 := a;
 ```
 
-Classificação: S
+Classificação: S.
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+A atribuição está estruturalmente incorreta, pois um valor não pode ser atribuído a um literal numérico.
 
 ### Item 2
 
@@ -96,11 +95,10 @@ ____________________________________________________________________________
 então (a < 10) se;
 ```
 
-Classificação: S
+Classificação: S.
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+A ordem dos elementos da estrutura condicional está errada.
 
 ### Item 3
 
@@ -109,11 +107,10 @@ inteiro soma;
 soma := 4.5;
 ```
 
-Classificação: M
+Classificação: M.
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+Existe incompatibilidade entre os tipos, pois um valor `real` está sendo atribuído a uma variável do tipo `inteiro`.
 
 ### Item 4
 
@@ -123,11 +120,10 @@ media := 10.0;
 
 Considere que `media` não foi declarada anteriormente.
 
-Classificação: M
+Classificação: M.
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+O uso de uma variável não declarada é tratado como erro semântico, uma vez que o compilador não consegue resolver o identificador na tabela de símbolos.
 
 ### Item 5
 
@@ -136,11 +132,10 @@ real media;
 media := 10.0;
 ```
 
-Classificação: V
+Classificação: V.
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+O trecho é válido, pois segue as regras fornecidas.
 
 ### Item 6
 
@@ -151,11 +146,10 @@ se a < 10 então
 
 Considere que `a` foi declarada como inteira.
 
-Classificação: V
+Classificação: V.
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+O trecho é válido, pois segue as regras fornecidas.
 
 ---
 
@@ -169,8 +163,8 @@ Explique a classe gramatical e o significado da palavra destacada em cada frase.
 2. “O **caminho** é longo.”
 
 **Explicação:**  
-1) Verbo.  
-2) Substantivo.
+1. Verbo. Indica a ação de andar ou percorrer a pé.  
+2. Substantivo. Indica uma via ou extensão que se percorre.
 
 ### Caso B — “colher”
 
@@ -178,8 +172,8 @@ Explique a classe gramatical e o significado da palavra destacada em cada frase.
 2. “A **colher** caiu no chão.”
 
 **Explicação:**  
-1) Verbo.  
-2) Substantivo.
+1. Verbo. Indica a ação de pegar ou coletar algo, geralmente relacionado a plantas.  
+2. Substantivo. Indica um utensílio de mesa/cozinha.
 
 ### Caso C — programação
 
@@ -200,8 +194,8 @@ fim
 2. Que informações o compilador precisa consultar para interpretar corretamente esse nome?
 
 **Resposta:**  
-1) Variável e função, respectivamente.  
-2) 
+1. Variável do tipo inteiro e função, respectivamente.  
+2. O compilador consulta a tabela de símbolos para obter as informações do identificador “soma”, como categoria, tipo e escopo em que foi declarado.
 
 ### Debate
 
@@ -232,31 +226,27 @@ Responda:
 1. O trecho está sintaticamente correto? Justifique.
 
    **Resposta:**  
-   __________________________________________________________________________  
-   __________________________________________________________________________
+   Sim, o trecho não apresenta nenhuma discordância com as regras estabelecidas.
 
 2. Há incompatibilidade de tipos ou uso de variável não declarada no trecho apresentado?
 
    **Resposta:**  
-   __________________________________________________________________________  
-   __________________________________________________________________________
+   Não, as variáveis “salario” e “novoSalario” foram declaradas como `real`, e a operação entre valores reais é compatível com o tipo declarado.
 
 3. O programa realiza o objetivo proposto? Justifique.
 
    **Resposta:**  
-   __________________________________________________________________________  
-   __________________________________________________________________________
+   Não, pois o valor que deveria multiplicar o salário deveria ser `1.1` e não `11`.
 
 4. Classifique o problema como erro sintático, erro semântico estático ou erro lógico.
 
    **Resposta:**  
-   __________________________________________________________________________
+   Erro lógico, porque o trecho é sintaticamente e semanticamente válido, mas a operação realizada não corresponde ao resultado esperado pelo programa.
 
 5. Corrija a linha responsável pelo problema.
 
 ```text
-
-
+novoSalario := salario * 1.1;
 ```
 
 ---
@@ -279,17 +269,17 @@ Organize as etapas abaixo na ordem didática mais comum de um compilador:
 
 | Etapa | O que analisa? | Exemplo de problema detectado |
 |---|---|---|
-| Análise léxica |  |  |
-| Análise sintática |  |  |
-| Análise semântica |  |  |
+| Análise léxica | A sequência de caracteres do código-fonte | Detecção de símbolos ou palavras inválidas |
+| Análise sintática | A organização dos tokens conforme as regras da linguagem | Detecção de ordem ou estrutura incorreta dos elementos |
+| Análise semântica | O significado das estruturas | Detecção de uso de variável não declarada |
 
 ### Parte C — Fluxograma
 
 Desenhe um fluxo contendo os seguintes elementos:
 
 ```text
-Código-fonte → __________ → tokens → __________ → estrutura sintática
-            → __________ → código validado para as próximas etapas
+Código-fonte → analisador léxico → tokens → analisador sintático → estrutura sintática
+            → analisador semântico → código validado para as próximas etapas
 ```
 
 ### Questão de reflexão
@@ -319,8 +309,8 @@ Para cada exemplo, apresente a classificação e a justificativa.
 
 Complete:
 
-- **Léxico** está relacionado a _______________________________________________.
-- **Sintaxe** está relacionada a ______________________________________________.
-- **Semântica** está relacionada a ____________________________________________.
-- **Erro lógico** ocorre quando _______________________________________________.
+- **Léxico** está relacionado à conversão da sequência de caracteres em tokens.
+- **Sintaxe** está relacionada às regras de relação entre as palavras/tokens.
+- **Semântica** está relacionada ao significado dos elementos e interpretação da sentença.
+- **Erro lógico** ocorre quando o texto é aceito, mas o resultado não corresponde ao comportamento esperado.
 
