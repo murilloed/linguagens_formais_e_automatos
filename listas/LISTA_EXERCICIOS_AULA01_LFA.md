@@ -3,9 +3,9 @@
 ## Linguagens Formais e Autômatos
 
 **Tema:** sintaxe, semântica e análise de código  
-**Professor:** __________________________________________  
-**Aluno(a):** ___________________________________________  
-**Turma:** ___________________ **Data:** ____/____/________
+**Professor:** Murillo Edson de Carvalho Souza
+**Aluno(a):** João Pedro Alves dos Santos Reis  
+**Turma:** MDC078 **Data:** 07/08/2026
 
 ---
 
@@ -45,26 +45,25 @@ Classifique cada sentença utilizando uma das categorias:
 
 | Item | Sentença | Classificação | Justificativa |
 |---:|---|:---:|---|
-| 1 | “As flores são belas.” |  |  |
-| 2 | “As flores é bela.” |  |  |
-| 3 | “Vou corre hoje no parque.” |  |  |
-| 4 | “Água bebeu José.” |  |  |
-| 5 | “O aluno acabou a prova.” |  |  |
+| 1 | “As flores são belas.”   | A | Adequada | A construção sintática está adequada no português usual.|
+| 2 | “As flores é bela.” | C | Problema de formação/escrita| A palavra escrita ou flexionada de forma inadequada para o contexto, pois não há flexão do verbo "é" (singular) para "São" (plural).|
+| 3 | “Vou corre hoje no parque.” | C | Problema de formação/escrita| A palavra escrita ou flexionada de forma inadequada para o contexto, pois não há flexão do verbo "correr" no infinitivo. |
+| 4 | “Água bebeu José.” | B | Problema sintático| Problema de ordem, concordância ou estrutura, a frase não faz sentido e sua ordem e estrutura não fazem sentido.|  
+| 5 | “O aluno acabou a prova.” | A | Adequada | A construção sintática está adequada no português usual.|
 
 ### Questões complementares
 
 1. A sentença do item 4 é impossível em português ou apenas incomum na ordem mais frequente? Explique.
 
    **Resposta:**  
-   ____________________________________________________________________________  
-   ____________________________________________________________________________
+  É possível, mas estaria errado de acordo com a norma padrão da língua portuguesa.
 
 2. Reescreva todas as sentenças problemáticas de maneira adequada ao português usual.
 
    **Resposta:**  
-   ____________________________________________________________________________  
-   ____________________________________________________________________________
-
+   2) "As flores são belas"
+   3) "Vou correr hoje no parque"
+   4) "José bebeu água"
 ---
 
 ## Exercício 2 — Sintaxe e semântica na programação
@@ -83,11 +82,10 @@ Analise os trechos abaixo. Classifique o problema predominante como:
 45 := a;
 ```
 
-Classificação: ________
+Classificação: M
 
 Justificativa:  
-____________________________________________________________________________  
-____________________________________________________________________________
+Reconhecemos a estrutura de que há uma igualdade entre dois valores, mas não é compatível ou válido, pois há comparação de um número inteiro com uma variável.
 
 ### Item 2
 
@@ -95,7 +93,7 @@ ____________________________________________________________________________
 então (a < 10) se;
 ```
 
-Classificação: ________
+Classificação: S
 
 Justificativa:  
 ____________________________________________________________________________  
@@ -108,7 +106,7 @@ inteiro soma;
 soma := 4.5;
 ```
 
-Classificação: ________
+Classificação: V
 
 Justificativa:  
 ____________________________________________________________________________  
@@ -122,7 +120,7 @@ media := 10.0;
 
 Considere que `media` não foi declarada anteriormente.
 
-Classificação: ________
+Classificação: M
 
 Justificativa:  
 ____________________________________________________________________________  
@@ -135,7 +133,7 @@ real media;
 media := 10.0;
 ```
 
-Classificação: ________
+Classificação: V
 
 Justificativa:  
 ____________________________________________________________________________  
@@ -150,7 +148,7 @@ se a < 10 então
 
 Considere que `a` foi declarada como inteira.
 
-Classificação: ________
+Classificação: V
 
 Justificativa:  
 ____________________________________________________________________________  
@@ -167,10 +165,10 @@ Explique a classe gramatical e o significado da palavra destacada em cada frase.
 1. “Eu **caminho** todos os dias.”
 2. “O **caminho** é longo.”
 
+
+
 **Explicação:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+Na primeira frase a palavra caminho é um verbo, "caminhar". Já na segunda frase, o caminho é substantivo.
 
 ### Caso B — “colher”
 
@@ -178,9 +176,7 @@ ____________________________________________________________________________
 2. “A **colher** caiu no chão.”
 
 **Explicação:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+Na primeira frase a palavra colher é um verbo, no infinitivo. Na segunda a palavra colher é substantivo.
 
 ### Caso C — programação
 
@@ -201,9 +197,8 @@ fim
 2. Que informações o compilador precisa consultar para interpretar corretamente esse nome?
 
 **Resposta:**  
-____________________________________________________________________________  
-____________________________________________________________________________  
-____________________________________________________________________________
+1) No primeiro, o soma é uma variável que é relacionado ao valor 10. Na segunda parte o soma é uma função que soma o inteiro a e o inteiro b.
+2) No primeiro, ele vê a declaração de #soma como inteiro e após isso #soma com o valor 10. Na segunda a soma agora é uma função e
 
 ### Debate
 
