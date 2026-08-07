@@ -3,9 +3,9 @@
 ## Linguagens Formais e Autômatos
 
 **Tema:** sintaxe, semântica e análise de código  
-**Professor:** __________________________________________  
-**Aluno(a):** ___________________________________________  
-**Turma:** ___________________ **Data:** ____/____/________
+**Professor:** __Murillo_Edson Carvalho de Souza_______  
+**Aluno(a):** __Heitor dos Santos Ribeiro______________  
+**Turma:** ___LFA(Manha)________________ **Data:** __07__/__08__/_2026___
 
 ---
 
